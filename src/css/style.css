@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 :root{--diouf-ff-body: "Work Sans";--diouf-ff-title: "Oswald", 'sans serif';--diouf-fs: 16px;--diouf-radius: 4px;--diouf-c1: #005761;--diouf-c2: #0ED2B3;--diouf-c3: #ECF3F4;--diouf-c4: #1B1B1B;}
 *{padding: 0%;margin: 0%;box-sizing: border-box;}
-body{font-family: var(--diouf-ff-body);font-size: var(--diouf-fs);}
+body{font-family: var(--diouf-ff-body);font-size: var(--diouf-fs);color: var(--diouf-c4);}
 h1,h2,h3,h4,h5,h6{font-family: var(--diouf-ff-title);}
-.btn, button{background: var(--diouf-c2);padding: 12px 15px;border: 0;color: var(--diouf-c3);font-size: 16px;letter-spacing: 1px;border-radius: var(--diouf-radius);}
-.btn:hover, button:hover{}
-
+.btn, button{background: var(--diouf-c2);padding: 12px 15px;border: 0;color: var(--diouf-c3);font-size: 16px;letter-spacing: 1px;border-radius: var(--diouf-radius);transition: all .3s linear;}
+.btn:hover, button:hover, .btn-contact:hover {filter: brightness(.8);}
+#root{z-index: 999;}
+iframe{z-index: -1 !important;}
 /* header style */
 .navbar{display: flex;justify-content: space-between;position: fixed;width: 100%;padding: 2% 10%;z-index: 1;}
 .navbar nav ul{display: flex;list-style: none;align-items: center;gap: 30px;}
 .navbar nav ul li a{color: var(--diouf-c3);text-decoration: none;letter-spacing: 1px;font-size: 16px;font-weight: 500;}
 .navbar nav ul li a.btn-contact{background: var(--diouf-c2);padding: 12px 20px;border-radius: var(--diouf-radius);transition: all .3s linear;}
-.navbar nav ul li a.btn-contact:hover{background: var(--diouf-c3);}
 .homepage header{height: 100vh;background: var(--diouf-c1);width: 100%;display: flex;align-items: center;padding: 14% 10% 10%;position: relative;justify-content: space-between;}
 .homepage header:before{content: "";position: absolute;inset: 0;background-image: url("/assets/images/bg.png");z-index: 0;background-size: cover;opacity: .2;}
 .homepage header .slogan{width: 50%;display: flex;flex-direction: column;gap: 20px;position: relative;z-index: 1;}
@@ -19,11 +19,11 @@ h1,h2,h3,h4,h5,h6{font-family: var(--diouf-ff-title);}
 .homepage header .slogan > span::before{content: "";position: absolute;width: 50px;height: 1px;background: var(--diouf-c2);left: 0%;top: 50%;transform: translateY(-50%);}
 .homepage header .slogan h1{color: var(--diouf-c3);font-size: 4em;text-transform: uppercase;line-height: 1.5;}
 .homepage header .slogan form{display: flex;font-size: 20px;gap: 10px;}
-.homepage header .slogan form select{padding: 15px 20px;border: 0;min-width: 200px;} */
+.homepage header .slogan form select{padding: 15px 20px;border: 0;min-width: 200px;}
 .homepage header .slogan form select option{font-size: 20px;}
-.homepage header .slogan form button{}
+.homepage header .slogan form button{cursor: pointer;}
 .homepage header .img-header{width: 50%;float: right;}
-.homepage header .img-header img{}
+.homepage header .img-header img{object-position: right;}
+section.header-info{display: flex;justify-content: space-evenly;background: var(--diouf-c3);position: absolute;width: 80%;transform: translate(-50%, -10vh);padding: 40px;left: 50%;backdrop-filter: blur(10px);box-shadow: 5px 5px 40px #0000004f;border-radius: var(--diouf-radius);}
+section.header-info .item{display: flex;flex-direction: column;align-items: center;gap: 20px;letter-spacing: .5px;}
 
-section.header-info{display: flex;justify-content: space-evenly;background: #ecf3f41f;position: absolute;width: 80%;transform: translate(-50%, -10vh);padding: 40px;left: 50%;border: 1px solid #009b82;backdrop-filter: blur(10px);}
-section.header-info .item{display: flex;flex-direction: column;align-items: center;color: var(--diouf-c3);gap: 20px;letter-spacing: .5px;}

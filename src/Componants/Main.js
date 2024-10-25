@@ -1,4 +1,6 @@
 import React from "react";
+import { Image } from "antd";
+import TextHome from "./TextHome";
 export default function Main(){
     return(
         <main>
@@ -19,6 +21,12 @@ export default function Main(){
                     <img src="/assets/images/icon-4.png" alt="Orthodontiste" />
                     <span>Pédodontiste</span>
                 </div>
+            </section>
+            <section className="about">
+                <div className="text-home">
+                    <TextHome/>
+                </div>
+                <div className="img-header"><Image src="/assets/images/about-banner.png"/></div>
             </section>
         </main>
     )
